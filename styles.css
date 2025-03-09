@@ -1,1 +1,51 @@
-/*  your css code here. If applicable */
+/* Full-page grid container */
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  grid-template-rows: auto; 
+  gap: 5px;
+  height: 100vh;
+  background-color: white;
+  padding: 5px;
+}
+
+
+#grid div {
+  background-color: green;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+
+#grid div:nth-child(1) {
+  grid-column: span 2;
+}
+
+#grid div:nth-child(2) {
+  grid-row: span 5; 
+}
+
+#grid div:nth-child(3),
+#grid div:nth-child(4) {
+  grid-column: span 1; 
+}
+
+#grid div:nth-child(5),
+#grid div:nth-child(6) {
+  grid-column: span 2; 
+}
+
+#grid div:nth-child(7),
+#grid div:nth-child(8),
+#grid div:nth-child(9) {
+  grid-column: span 1; 
+}
+
+#grid div:nth-child(10) {
+  grid-column: span 2; 
+}
